@@ -105,7 +105,7 @@ pub fn open_window(dim: WindowDim, title: &str, win_opt: WindowOpt) -> Result<De
   let gl_profile = GlProfile::Core;
 
   let events_loop = EventsLoop::new();
-  let events_loop_ = &events_loop;
+  let events_loop_ = &events_loop; // TODO: nope, won’t make it, because we need .clone() instead
 
   let decorate_window_builder = move |builder: WindowBuilder| {
     builder
